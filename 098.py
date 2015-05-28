@@ -4,13 +4,14 @@ import collections
 import itertools
 import math
 
-
+# https://projecteuler.net/problem=98
 def hash(s):
     return collections.Counter(s)
 
 def sq(s1, s2):
     max = 0
 
+    #chars
     m = hash(s1)
     n = len(m)
     digits = range(0, 10)
@@ -18,6 +19,7 @@ def sq(s1, s2):
     for subset in itertools.permutations(digits, n):
         n1 = s1
         n2 = s2
+        #false if mapping results in leading zero
         conv = True
         for c, n in zip(m.keys(), subset):
             #leading zero
@@ -30,6 +32,7 @@ def sq(s1, s2):
             continue
         num1 = int(n1)
         num2 = int(n2)
+
         if math.sqrt(num1).is_integer() and math.sqrt(num2).is_integer():
             if (num1 > max):
                 max = num1
@@ -53,3 +56,4 @@ for word1 in words:
             max = s
 
 print(max)
+# ?
