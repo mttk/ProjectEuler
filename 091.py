@@ -1,4 +1,3 @@
-__author__ = 'mttk'
 
 import numpy as np
 from fractions import gcd

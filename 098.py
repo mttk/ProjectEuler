@@ -1,4 +1,3 @@
-__author__ = 'tutekma'
 
 import collections
 import itertools

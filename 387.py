@@ -1,4 +1,3 @@
-__author__ = 'tutekma'
 
 from math import sqrt
 from itertools import count, islice
