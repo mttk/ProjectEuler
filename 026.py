@@ -15,13 +15,11 @@ def division(n, d):
             break
         while n < d:
             n *= 10
-
         if n in signatures:
             cycle_len = i - signatures[n]
             return cycle_len
         else:
             signatures[n] = i
-
         n = n % d
         i += 1
     return 0
